@@ -1,9 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Column from './column';
+import ViewSide from './extraScript/viewer/viewSide';
+import PromtMainSide from './extraScript/prompt/promptSide';
 
 function App() {
   return (
-    <h1>Hello Yann</h1>
+    <div className="row r">
+      <div className="col-5">
+        <PromtMainSide />
+      </div>
+      <div className="col-7">
+        <ViewSide />
+      </div>
+    </div>
   );
 }
 

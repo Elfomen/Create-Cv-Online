@@ -1,0 +1,45 @@
+[
+    {
+        "title" : "Personal-details",
+        "id" : "headingOne",
+        "col" : "collapseOne",
+        "expand" : "false"
+    }
+    ,
+    {
+        "title" : "Profile",
+        "id" : "headingTwo",
+        "col" : "collapseTwo",
+        "expand" : "false"
+    },
+    {
+        "title" : "Formation",
+        "id" : "headingThree",
+        "col" : "collapseThree",
+        "expand" : "false"
+    },
+    {
+        "title" : "Professional Experience",
+        "id" : "headingFour",
+        "col" : "collapseFour",
+        "expand" : "false"
+    },
+    {
+        "title" : "Competences",
+        "id" : "headingFive",
+        "col" : "collapseFive",
+        "expand" : "false"
+    },
+    {
+        "title" : "Language",
+        "id" : "headingSix",
+        "col" : "collapseSix",
+        "expand" : "false"
+    },
+    {
+        "title" : "Hobbies",
+        "id" : "headingSeven",
+        "col" : "collapseSeven",
+        "expand" : "false"
+    }
+]

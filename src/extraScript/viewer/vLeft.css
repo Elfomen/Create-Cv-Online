@@ -1,0 +1,40 @@
+.left{
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.row1{
+    height: 15%;
+    background-color: #4db8ff;
+    border-top-left-radius: 8px;
+    align-content: center;
+    display: block;
+    text-align: center;
+}
+
+.row2{
+    height: 75%;
+    background-color: #d9d9d9;
+}
+
+.row3{
+    height: 10%;
+    background-color: #4db8ff;
+}
+
+
+h1{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: "sofia";
+    font-size: 20px;
+}
+
+.img{
+    width: 100px;
+}
