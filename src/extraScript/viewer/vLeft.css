@@ -9,7 +9,7 @@
 
 .row1{
     height: 15%;
-    background-color: #4db8ff;
+    background-color: #264f6b;
     border-top-left-radius: 8px;
     align-content: center;
     display: block;
@@ -23,7 +23,8 @@
 
 .row3{
     height: 10%;
-    background-color: #4db8ff;
+    background-color: #264f6b;
+    border-bottom-left-radius: 8px;
 }
 
 
@@ -31,7 +32,7 @@ h1{
     color: white;
     text-align: center;
     margin: 0;
-    font-family: "sofia";
+    font-family: "Trirong";
     font-size: 20px;
 }
 
