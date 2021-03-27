@@ -1,4 +1,67 @@
-import React from 'react';
+import React , {useState, useEffect} from 'react';
+
+
+function Personal_details(){
+ 
+  return(
+    <div className="row">
+      <div className="col-4">
+         <form className="md-form">
+          <div className="file-field">
+            <div className="mb-4">
+              <img id="img" style={{width:"100px" , borderRadius:"50%"}} src={`https://mdbootstrap.com/img/Photos/Others/placeholder-avatar.jpg`}
+                />
+            </div>
+            <div className="mb-3">
+                  <label htmlFor="formFileSm" className="form-label">Small file input example</label>
+                  <input className="form-control form-control-sm" id="formFileSm" type="file"/>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div className="col-8">
+        <div class="input-group">
+           <span class="input-group-text">First and last name</span>
+          <input type="text" aria-label="First name" class="form-control"/>
+          <input type="text" aria-label="Last name" class="form-control"/>
+        </div><br></br><br></br>
+
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input type="email" class="form-control" placeholder="Enter your email adresse" aria-label="Username" aria-describedby="addon-wrapping"/>
+        </div>
+
+        <br></br><br></br>
+
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">$</span>
+            <input type="email" class="form-control" placeholder="Phone Number" aria-label="Username" aria-describedby="addon-wrapping"/>
+        </div>
+
+        <br></br><br></br>
+
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input type="email" class="form-control" placeholder="Adress" aria-label="Username" aria-describedby="addon-wrapping"/>
+        </div>
+
+        <br></br><br></br>
+
+       <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="Zip Code" aria-label="Username"/>
+          <span class="input-group-text">@</span>
+          <input type="text" class="form-control" placeholder="City" aria-label="Server"/>
+      </div>
+      </div>
+    </div>
+  );
+}
+
+
+
+
+
 
 export default function Accordeon({title , id , col , expand}){
     return(
@@ -11,7 +74,7 @@ export default function Accordeon({title , id , col , expand}){
                 </h2>
                 <div id={col} className="accordion-collapse collapse show" aria-labelledby={id} data-bs-parent="#accordionExample">
                   <div className="accordion-body">
-                    <strong>This is the first item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    {title=="Personal_details" ? <Personal_details /> : title}
                   </div>
                 </div>
             </div>

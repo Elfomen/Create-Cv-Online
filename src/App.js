@@ -7,10 +7,10 @@ import PromtMainSide from './extraScript/prompt/promptSide';
 function App() {
   return (
     <div className="row r">
-      <div className="col-5">
+      <div className="col-7">
         <PromtMainSide />
       </div>
-      <div className="col-7">
+      <div className="col-5">
         <ViewSide />
       </div>
     </div>

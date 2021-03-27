@@ -9,10 +9,11 @@ export default function LeftColumn(){
            <aside className="row1">
                <h1>Curriculum Vitae</h1>
                <SetImage />
+              
            </aside>
            
            <aside className="row2">
-               <PersonalDetails />
+                 <PersonalDetails />
            </aside>
            <aside className="row3"></aside>
         </aside>

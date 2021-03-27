@@ -2,27 +2,29 @@
     height: 100%;
     margin: auto;
     padding: 0;
-    
+    background-color: #d9d9d9;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
 
 .row1{
-    height: 15%;
+    height: 10%;
     background-color: #264f6b;
     border-top-left-radius: 8px;
-    align-content: center;
+    border-bottom-left-radius: 35%;
+    border-bottom-right-radius: 35%;
     display: block;
     text-align: center;
+    padding: 0;
 }
 
 .row2{
-    height: 75%;
+    height: 85%;
     background-color: #d9d9d9;
 }
 
 .row3{
-    height: 10%;
+    height: 5%;
     background-color: #264f6b;
     border-bottom-left-radius: 8px;
 }
@@ -33,7 +35,7 @@ h1{
     text-align: center;
     margin: 0;
     font-family: "Trirong";
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .img{

@@ -1,6 +1,6 @@
 [
     {
-        "title" : "Personal-details",
+        "title" : "Personal_details",
         "id" : "headingOne",
         "col" : "collapseOne",
         "expand" : "false"
@@ -19,7 +19,7 @@
         "expand" : "false"
     },
     {
-        "title" : "Professional Experience",
+        "title" : "Professional_Experience",
         "id" : "headingFour",
         "col" : "collapseFour",
         "expand" : "false"
