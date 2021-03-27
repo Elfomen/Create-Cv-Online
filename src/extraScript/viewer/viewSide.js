@@ -3,10 +3,10 @@ import './viewer.css';
 import LeftColumn from './leftCol';
 import RightColumn from './rightcol';
 
-export default function ViewSide(){
+export default function ViewSide({list}){
     return(
         <div className="row main-viewer">
-            <LeftColumn />
+            <LeftColumn list={list}/>
             <RightColumn />
         </div>
     );

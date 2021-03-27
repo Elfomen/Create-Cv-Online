@@ -1,9 +1,9 @@
-import React , {useState, useEffect} from 'react';
+import React , {useState, useEffect , createContext} from 'react';
 
-
-function Personal_details(){
- 
+  
+function Personal_details({onChange = f => f}){
   return(
+    
     <div className="row">
       <div className="col-4">
          <form className="md-form">
@@ -23,7 +23,7 @@ function Personal_details(){
       <div className="col-8">
         <div class="input-group">
            <span class="input-group-text">First and last name</span>
-          <input type="text" aria-label="First name" class="form-control"/>
+          <input type="text" aria-label="First name" class="form-control" onChange = {(e) => onChange(e.target.value)}/>
           <input type="text" aria-label="Last name" class="form-control"/>
         </div><br></br><br></br>
 
@@ -55,6 +55,7 @@ function Personal_details(){
       </div>
       </div>
     </div>
+   
   );
 }
 
@@ -63,7 +64,7 @@ function Personal_details(){
 
 
 
-export default function Accordeon({title , id , col , expand}){
+export default function Accordeon({title , id,col , expand , onChange = f => f}){
     return(
         <div className="accordion" id="accordionExample">
             <div className="accordion-item">
@@ -74,7 +75,7 @@ export default function Accordeon({title , id , col , expand}){
                 </h2>
                 <div id={col} className="accordion-collapse collapse show" aria-labelledby={id} data-bs-parent="#accordionExample">
                   <div className="accordion-body">
-                    {title=="Personal_details" ? <Personal_details /> : title}
+                    {title=="Personal_details" ? <Personal_details onChange={onChange}/> : title}
                   </div>
                 </div>
             </div>
