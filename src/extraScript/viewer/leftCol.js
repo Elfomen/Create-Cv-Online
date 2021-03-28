@@ -1,5 +1,6 @@
 import React from 'react';
 import PersonalDetails from './viwerComponent/personalDetails';
+import Language from './viwerComponent/Language';
 import './vLeft.css';
 import SetImage from './image';
 
@@ -14,6 +15,7 @@ export default function LeftColumn({list}){
            
            <aside className="row2">
                  <PersonalDetails {...list[0]}/>
+                 <Language {...list[5]}/>
            </aside>
            <aside className="row3"></aside>
         </aside>

@@ -3,62 +3,63 @@
         "title" : "Personal_Details" , 
         "id" : 1 , 
         "first_name" : "" , 
-            "last_name" : "" , 
-            "email_adress" : "" , 
-            "phone_number" : "", 
-            "adress" : "" , 
-            "birth_date" : "" ,
-            "drivers_licence" : "" ,
-            "zip_code" : "" , 
-            "city" : "" , 
-            "lin" : "" , 
-            "git" : "" , 
-            "port_folio" : ""
+        "" : "" , 
+        "email_adress" : "" , 
+        "phone_number" : "", 
+        "adress" : "" , 
+        "birth_date" : "" ,
+        "drivers_licence" : "" ,
+        "zip_code" : "" , 
+        "city" : "" , 
+        "lin" : "" , 
+        "git" : "" , 
+        "port_folio" : ""
 
     } , 
     {
         "title" : "Profile" , 
         "id" : 2,
-            "profile_describtion" : ""
+        "profile_describtion" : ""
 
     } , 
 
     {
         "title" : "Education" , 
         "id" : 3,
-            "education" : "" , 
-            "school" : "" , 
-            "city" : "" , 
-            "start_date" : "" , 
-            "educational_end_date" : "" , 
-            "educational_description" : ""
+        "education" : "" , 
+        "school" : "" , 
+        "city" : "" , 
+        "start_date" : "" , 
+        "educational_end_date" : "" , 
+        "educational_description" : ""
     } , 
     {
         "title" : "Employment" , 
         "id" : 4,
-            "position" : "" , 
-            "employer" : "" , 
-            "city" : "" , 
-            "start_date" : "" , 
-            "employment_end_date" : "" , 
-            "employment_description" : ""
+        "position" : "" , 
+        "employer" : "" , 
+        "city" : "" , 
+        "start_date" : "" , 
+        "employment_end_date" : "" , 
+        "employment_description" : ""
     } , 
     {
         "title" : "Skills" , 
         "id" : 5,
-            "skill" : "" , 
-            "skill_level" : "" 
+        "skill" : "" , 
+        "skill_level" : "" 
     },
     {
         "title" : "Languages" , 
         "id" : 6,
-            "language" : "" , 
-            "language_level" : ""
+        "language" : "English" , 
+        "language_level" : 5 , 
+        "language_number" : [{"name" : "English" , "level" : 4} , {"name" : "Frech" , "level" : 1} , {"name" : "spanish" , "level" : 2}]
     } , 
     {
         "title" : "Hobbies" , 
         "id" : 7,
-            "hobby" : ""
+        "hobby" : ""
     }
 ]
 

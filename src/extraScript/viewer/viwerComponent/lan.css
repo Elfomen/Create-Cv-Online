@@ -1,0 +1,17 @@
+
+.topic{
+    margin: 0;
+    float: left;
+    color: #264f6b;
+}
+
+.col-main{
+    display: block;
+    align-items: center;
+}
+
+.title-language{
+    margin-top: 7px;
+    color: black;
+    font-size: 12px;
+}
