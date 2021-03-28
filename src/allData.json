@@ -25,13 +25,8 @@
 
     {
         "title" : "Education" , 
-        "id" : 3,
-        "education" : "" , 
-        "school" : "" , 
-        "city" : "" , 
-        "start_date" : "" , 
-        "educational_end_date" : "" , 
-        "educational_description" : ""
+        "id" : 3, 
+        "educational_number" : [{"education" : "","school" : "" , "city" : "" ,"educational_start_date": "" , "educational_end_date" : "" , "educational_description" : ""}]
     } , 
     {
         "title" : "Employment" , 

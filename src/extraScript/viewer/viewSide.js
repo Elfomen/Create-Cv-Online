@@ -7,7 +7,7 @@ export default function ViewSide({list}){
     return(
         <div className="row main-viewer">
             <LeftColumn list={list} />
-            <RightColumn />
+            <RightColumn list={list}/>
         </div>
     );
 }

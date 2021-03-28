@@ -1,0 +1,16 @@
+h1{
+    color: #264f6b;
+}
+
+.education_name{
+    font-weight: bolder;
+    color: black;
+}
+
+.educational_dates{
+     color: #264f6b;
+}
+
+label{
+    font-size: 10px;
+}

@@ -130,6 +130,71 @@ function Hobbies({onChange=f=>f , onClick=f=>f}){
 }
 
 
+function Profile({onChange=f=>f}){
+  return(
+    <div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"/>
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Enter Profile description</label>
+        <textarea onChange={e => onChange(e.target.id)} class="form-control" id="profile" rows="3"></textarea>
+    </div>
+    </div>
+  );
+}
+
+
+
+function Education({onChange=f=>f , onClick=f=>f}){
+  return(
+    <div>
+       <div className="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Education</label>
+            <input id="education" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+       </div>
+
+        <div className="row">
+          <div className="col-6">
+              <label for="exampleFormControlInput1" class="form-label">School</label>
+              <input id="school" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+          </div>
+
+          <div className="col-6">
+              <label for="exampleFormControlInput1" class="form-label">City</label>
+              <input id="cit" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+          </div>
+        </div>
+
+        <div className="row">
+            <div className="col-6">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Start Date</label>
+                  <input id="start_date" onChange={e => onChange(e.target.id)} type="date" class="form-control"/>
+                </div>
+            </div>
+      
+            <div className="col-6">
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">End Date</label>
+                      <input id="end_date" onChange={e => onChange(e.target.id)} type="date" class="form-control"/>
+                  </div>
+
+            </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea id="education_description" onChange={e => onChange(e.target.id)} class="form-control" rows="3"></textarea>
+        </div>
+
+        <button id="education_click" onClick={e => onClick(e.target.id)} className="btn btn-primary">Add a formation</button>
+    </div>
+  );
+}
+
+
 
 
 
@@ -146,7 +211,8 @@ export default function Accordeon({title , id,col , expand ,onChange = f => f ,o
                 <div id={col} className="accordion-collapse collapse show" aria-labelledby={id} data-bs-parent="#accordionExample">
                   <div className="accordion-body">
                     {title=="Personal_details" ? <Personal_details onChange={onChange}/> : 
-                    (title == "Language" ? <Language onChange={onChange} onClick={onClick}/> : (title == "Hobbies" ? <Hobbies onChange={onChange} onClick={onClick}/> : title))}
+                    (title == "Language" ? <Language onChange={onChange} onClick={onClick}/> : (title == "Hobbies" ? <Hobbies onChange={onChange} onClick={onClick}/> : 
+                    (title == "Profile" ? <Profile onChange={onChange}/> : (title == "Formation"?<Education onChange={onChange} onClick={onClick  }/> : title))))}
                   </div>
                 </div>
             </div>

@@ -284,6 +284,8 @@ function App() {
 
   useEffect(() => {
     if(clicked!="lan_clicked") return null;
+    document.querySelector("#language").value = "";
+    document.querySelector("#range").value = 0;
     newData = Main;
     var language_number = newData[5].language_number;
     
@@ -296,15 +298,124 @@ function App() {
 
   useEffect(() => {
     if(clicked!="hob_clicked") return null;
+
+    document.querySelector("#hobby").value = "";
+    document.querySelector("#range_hobby").value = 0;
     newData = Main;
     var hobby_number = newData[6].hobby_number;
     
-    newData[5].hobby_number = [...hobby_number , {name:"" , level : 0}];
+    newData[6].hobby_number = [...hobby_number , {name:"" , level : 0}];
 
     setData(newData);
     Main = newData;
     setClicked(null)
   } , [clicked])
+
+
+  // The profile use Effect
+
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    newData = [];
+    Main.map(da => (
+      
+      id == "profile" ? newData.push({...da , profile_describtion : name}): newData.push(da)),
+      
+      );
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+
+  // The educational use Effect
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].education = id=="education" ? name : newData[2].educational_number[newData[2].educational_number.length -1].education;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].school = id=="school" ? name : newData[2].educational_number[newData[2].educational_number.length -1].school;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].city = id=="cit" ? name : newData[2].educational_number[newData[2].educational_number.length -1].city;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].educational_start_date = id=="start_date" ? name : newData[2].educational_number[newData[2].educational_number.length -1].educational_start_date;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].educational_end_date = id=="end_date" ? name : newData[2].educational_number[newData[2].educational_number.length -1].educational_end_date;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    
+    newData = Main;
+    newData[2].educational_number[newData[2].educational_number.length -1].educational_description = id=="education_description" ? name : newData[2].educational_number[newData[2].educational_number.length -1].educational_description;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(clicked!="education_click") return null;
+
+    document.querySelector("#education").value = "";
+    document.querySelector("#school").value = "";
+    document.querySelector("#cit").value = "";
+    document.querySelector("#start_date").value = "";
+    document.querySelector("#end_date").value = "";
+    document.querySelector("#education_description").value = "";
+    newData = Main;
+    var educational_number = newData[2].educational_number;
+    
+    newData[2].educational_number = [...educational_number , {education : "",school : "" , city : "" ,educational_start_date: "" , educational_end_date : "" , educational_description : ""}];
+
+    setData(newData);
+    Main = newData;
+    setClicked(null)
+  } , [clicked])
+  
 
   return (
     <div className="row r">
