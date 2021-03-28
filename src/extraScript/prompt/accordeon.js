@@ -91,19 +91,18 @@ function Personal_details({onChange = f => f}){
 }
 
 
-function Language(){
+function Language({onClick = f => f , onChange=f=>f}){
   return(
     <div className="row">
 
       <div className="col-6">
           <div class="input-group flex-nowrap">
             <span class="input-group-text" id="addon-wrapping">@</span>
-            <input id="port" type="email" class="form-control" placeholder="Enter a language" aria-label="Username" aria-describedby="addon-wrapping"/>
+            <input onChange={e => onChange(e.target.id)} id="language" type="email" class="form-control" placeholder="Enter a language" aria-label="Username" aria-describedby="addon-wrapping"/>
         </div>
-        <label for="customRange2" class="form-label">Example range</label>
-          <input type="range" class="form-range" min="0" max="5" id="customRange2"></input>
+          <input type="range" defaultValue="0" class="form-range" min="0" max="5" id="range" onChange={e => onChange(e.target.id)}></input>
 
-          <button type="button" class="btn btn-primary">Add a Language</button>
+          <button id="lan_clicked" type="button" class="btn btn-primary" onClick={e => onClick(e.target.id)}>Add a Language</button>
       </div>
 
       <div className="col-6"></div>
@@ -112,16 +111,20 @@ function Language(){
   );
 }
 
-function Hobbies(){
+function Hobbies({onChange=f=>f , onClick=f=>f}){
   return(
     <div className="row">
-      <div className="col-8">
-        <div class="input-group input-group-lg">
-          <span class="input-group-text" id="inputGroup-sizing-lg">Enter a Hobby</span>
-          <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg"/>
-        </div><br></br><br></br>
-        <button type="button" class="btn btn-primary">Add a Hobby</button>
+      <div className="col-6">
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input onChange={e => onChange(e.target.id)} id="hobby" type="email" class="form-control" placeholder="Enter a hobby" aria-label="Username" aria-describedby="addon-wrapping"/>
+        </div>
+          <input type="range" defaultValue="0" class="form-range" min="0" max="5" id="range_hobby" onChange={e => onChange(e.target.id)}></input>
+
+          <button id="hob_clicked" type="button" class="btn btn-primary" onClick={e => onClick(e.target.id)}>Add a Hobby</button>
       </div>
+
+      <div className="col-6"></div><br></br>
     </div>
   );
 }
@@ -131,7 +134,7 @@ function Hobbies(){
 
 
 
-export default function Accordeon({title , id,col , expand , onChange = f => f}){
+export default function Accordeon({title , id,col , expand ,onChange = f => f ,onClick = f => f}){
     return(
         <div className="accordion" id="accordionExample">
             <div className="accordion-item">
@@ -143,7 +146,7 @@ export default function Accordeon({title , id,col , expand , onChange = f => f})
                 <div id={col} className="accordion-collapse collapse show" aria-labelledby={id} data-bs-parent="#accordionExample">
                   <div className="accordion-body">
                     {title=="Personal_details" ? <Personal_details onChange={onChange}/> : 
-                    (title == "Language" ? <Language /> : (title == "Hobbies" ? <Hobbies /> : title))}
+                    (title == "Language" ? <Language onChange={onChange} onClick={onClick}/> : (title == "Hobbies" ? <Hobbies onChange={onChange} onClick={onClick}/> : title))}
                   </div>
                 </div>
             </div>

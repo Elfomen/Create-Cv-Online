@@ -52,14 +52,16 @@
     {
         "title" : "Languages" , 
         "id" : 6,
-        "language" : "English" , 
-        "language_level" : 5 , 
-        "language_number" : [{"name" : "English" , "level" : 4} , {"name" : "Frech" , "level" : 1} , {"name" : "spanish" , "level" : 2}]
+        "language" : "" , 
+        "language_level" : 0 , 
+        "language_number" : [{"name" : "" , "level" : 0}]
     } , 
     {
         "title" : "Hobbies" , 
         "id" : 7,
-        "hobby" : ""
+        "hobby" : "",
+        "hobby_level" : 0 , 
+        "hobby_number" : [{"name" : "" , "level" : 0}] 
     }
 ]
 

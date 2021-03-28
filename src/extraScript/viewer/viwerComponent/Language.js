@@ -30,15 +30,15 @@ function CreateLanguage({language , language_level}){
 export default function Language({language , language_level , language_number}){
     return(
         <>
-        <div className="row">
+        <div className="row" style={{display:language?'flex' : 'none'}}>
             <div className="col-12 col-main">
                 <h1 className="topic">Languages</h1><br></br>
-                <hr style={{width:"90%" , margin:"auto"}}></hr><br></br>
+                <hr style={{width:"90%" , margin:"auto"}}></hr>
             </div>
         </div>
         <div className="row" style={{display:language?'flex' : 'none'}}>
             {language_number.map((lan , i) => 
-            <CreateLanguage language={language_number[i].name} language_level={language_number[i].level}/>
+            <CreateLanguage key={i} language={language_number[i].name} language_level={language_number[i].level}/>
             )}
         </div>
         </>
