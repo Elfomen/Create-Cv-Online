@@ -1,6 +1,8 @@
-.right{
-    height: 100%;
+.right {
+  height: 100%;
+
+  background-color: white;
 }
-p{
-    color: black;
+p {
+  color: black;
 }

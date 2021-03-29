@@ -8,7 +8,7 @@ import Education from './viwerComponent/Education';
 
 export default function RightColumn({list}){
     return(
-        <aside className="col-8 right">
+        <aside className="right" style={{width:"70%"}}>
             <Profile {...list[1]}/>
             <Education {...list[2]}/>
             <Employment {...list[3]}/>

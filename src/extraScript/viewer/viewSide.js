@@ -5,7 +5,7 @@ import RightColumn from './rightcol';
 
 export default function ViewSide({list}){
     return(
-        <div className="row main-viewer">
+        <div className="row main-viewer" id="content">
             <LeftColumn list={list} />
             <RightColumn list={list}/>
         </div>

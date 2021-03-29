@@ -7,9 +7,9 @@ import SetImage from './image';
 
 export default function LeftColumn({list}){
     return(
-        <aside className="col-4 left">
+        <aside className="left" style={{width:"30%"}}>
            <aside className="row1">
-               <h1>{`${list[0].first_name?list[0].first_name : 'Curriculum Vitae'}`}</h1>
+               <h1 style={{color:"white"}}>{`${list[0].first_name?list[0].first_name : 'Curriculum Vitae'}`}</h1>
                <SetImage />
               
            </aside>

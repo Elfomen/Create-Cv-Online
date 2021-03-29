@@ -1,15 +1,14 @@
-p{
-    font-family: "Trirong";
-    color: #264f6b;
-    font-size: 12px;
+p {
+  font-family: "Trirong";
+  color: #264f6b;
+  font-size: 18px;
 }
 
-label{
-    font-size: 9px;
+label {
+  font-size: 18px;
 }
 
-
-hr{
-    width: 50%;
-    margin: 0 auto;
+hr {
+  width: 50%;
+  margin: 0 auto;
 }

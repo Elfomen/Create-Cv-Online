@@ -1,11 +1,10 @@
 .main-viewer{
-    height: 80%;
-    width: 33%;
-    margin: auto;
-    margin-top: 60px;
+    height: 297mm;
+    width: 210mm;
     margin-bottom: 60px;
-    margin-left: 70px;
-    box-shadow: 3px 3px 10px black;
     border-radius: 8px;
-    position: fixed;
+    padding: 0;
+   
+    
+    
 }

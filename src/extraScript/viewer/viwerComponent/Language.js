@@ -40,7 +40,7 @@ export default function Language({language , language_level , language_number}){
             {language_number.map((lan , i) => 
             <CreateLanguage key={i} language={language_number[i].name} language_level={language_number[i].level}/>
             )}
-        </div>
+        </div><br></br>
         </>
     );
 }

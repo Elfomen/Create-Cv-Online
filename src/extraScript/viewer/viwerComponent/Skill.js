@@ -14,7 +14,7 @@ function CreateSkill({skill , skill_level}){
     return(
         <>
             <div className="col-4">
-                <h1 style={{marginTop:"6px"}} className="title-skill">{skill}</h1>
+                <h1 style={{marginTop:"4px" , fontSize:"23px"}} className="title-skill">{skill}</h1>
             </div>
 
             <div className="col-6">

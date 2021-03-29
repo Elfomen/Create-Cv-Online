@@ -3,6 +3,7 @@ import ViewSide from './extraScript/viewer/viewSide';
 import PromtMainSide from './extraScript/prompt/promptSide';
 import ExecuteUseEffect from './executeUseEffects';
 
+import Export from './ExportPdf';
 
 import MainData from './allData.json';
 
@@ -543,15 +544,18 @@ function App(){
 
 
   return (
-    <div className="row r">
-      <div className="col-7">
+    <>
+    <Export name="Fomena_Wouati_Yannick"/>
+    <div className="row ">
+      <div className="col-5">
         <PromtMainSide onChange={e => (setName(document.querySelector(`#${e}`).value) , setId(e))} 
         onClick={(e) => setClicked(e)}/>
       </div>
-      <div className="col-5">
+      <div className="col-7" style={{margin:0}}>
         <ViewSide list={data}/>
       </div>
     </div>
+    </>
   );
 }
 export default App;

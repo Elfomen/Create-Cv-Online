@@ -11,12 +11,12 @@ function CreateEmployment({position , employer , city , employment_start_date , 
         </div>
         <div className="row det">
             <div className="col-6">
-                <label style={{color:"#264f6b"}}>{employer} , {city}</label>
+                <label style={{color:"#264f6b" , fontSize:"13px"}}>{employer} , {city}</label>
             </div>
             <div className="col-6">
-                <label style={{color:"#264f6b"}}>{employment_start_date} , {employment_end_date}</label>
+                <label style={{color:"#264f6b" , fontSize:"13px"}}>{employment_start_date} , {employment_end_date}</label>
             </div>
-            <label>{employment_description}</label>
+            <label style={{fontSize:"15px"}}>{employment_description}</label>
         </div>
         </>
     );
@@ -31,7 +31,7 @@ export default function Employment({employment_number}){
         </div>
         <div className="row" style={{display:employment_number[0].position?"flex":"none"}}>
             {employment_number.map((emp , i) => <CreateEmployment {...emp}/>)}
-        </div>
+        </div><br></br>
         </>
 
     );

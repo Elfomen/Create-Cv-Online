@@ -16,35 +16,35 @@ export default function PersonalDetails({lin , git , port_folio ,email_adress, p
         </div>
         <div className="row" style={{display:first_name?"flex":"none"}}>
             <div className="col-1"><FaUser style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{first_name} - {last_name}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{first_name} - {last_name}</label></div>
         </div>
          <div className="row" style={{display:email_adress?"flex":"none"}}>
             <div className="col-1"><FaEnvelope style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{email_adress}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{email_adress}</label></div>
         </div>
         <div className="row" style={{display:phone_number?"flex":"none"}}>
             <div className="col-1"><FaPhone style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{phone_number}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{phone_number}</label></div>
         </div> <div className="row"></div>
          <div className="row" style={{display:adress?"flex":"none"}}>
             <div className="col-1"><FaHome style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{adress} - {city} , {zip_code}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{adress} - {city} , {zip_code}</label></div>
         </div> <div className="row" style={{display:birth_date?"flex":"none"}}>
             <div className="col-1"><FaCalendar style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{birth_date}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{birth_date}</label></div>
         </div> <div className="row" style={{display:drivers_licence?"flex":"none"}}>
             <div className="col-1"><FaCar style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{drivers_licence}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{drivers_licence}</label></div>
         </div> <div className="row" style={{display:lin?"flex":"none"}}>
             <div className="col-1"><FaLinkedin style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{lin}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{lin}</label></div>
         </div> <div className="row" style={{display:git?"flex":"none"}}>
             <div className="col-1"><FaGithub style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{git}</label></div>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{git}</label></div>
         </div>
         <div className="row" style={{display:port_folio?"flex":"none"}}>
             <div className="col-1"><FaSitemap style={{color:"#264f6b"}}/></div>
-            <div className="col-10"><label>{port_folio}</label></div><br></br><br></br>
+            <div className="col-10"><label style={{fontSize:"13px"}}>{port_folio}</label></div><br></br><br></br>
         </div>
         
         
