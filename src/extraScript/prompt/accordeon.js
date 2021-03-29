@@ -193,6 +193,74 @@ function Education({onChange=f=>f , onClick=f=>f}){
     </div>
   );
 }
+function Employment({onChange=f=>f , onClick=f=>f}){
+  return(
+    <div>
+       <div className="col-6">
+            <label for="exampleFormControlInput1" class="form-label">Position</label>
+            <input id="position" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+       </div>
+
+        <div className="row">
+          <div className="col-6">
+              <label for="exampleFormControlInput1" class="form-label">Employer</label>
+              <input id="employer" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+          </div>
+
+          <div className="col-6">
+              <label for="exampleFormControlInput1" class="form-label">City</label>
+              <input id="employment_city" onChange={e => onChange(e.target.id)} type="text" class="form-control"/>
+          </div>
+        </div>
+
+        <div className="row">
+            <div className="col-6">
+                <div class="mb-3">
+                  <label for="exampleFormControlInput1" class="form-label">Start Date</label>
+                  <input id="employment_start_date" onChange={e => onChange(e.target.id)} type="date" class="form-control"/>
+                </div>
+            </div>
+      
+            <div className="col-6">
+                  <div class="mb-3">
+                      <label for="exampleFormControlInput1" class="form-label">End Date</label>
+                      <input id="employment_end_date" onChange={e => onChange(e.target.id)} type="date" class="form-control"/>
+                  </div>
+
+            </div>
+        </div>
+        
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Description</label>
+          <textarea id="employment_description" onChange={e => onChange(e.target.id)} class="form-control" rows="3"></textarea>
+        </div>
+
+        <button id="employment_click" onClick={e => onClick(e.target.id)} className="btn btn-primary">Add an Employment</button>
+    </div>
+  );
+}
+
+
+
+function Skills({onClick = f => f , onChange=f=>f}){
+  return(
+    <div className="row">
+
+      <div className="col-6">
+          <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">@</span>
+            <input onChange={e => onChange(e.target.id)} id="skill" type="text" class="form-control" placeholder="Enter a Skill" aria-label="Username" aria-describedby="addon-wrapping"/>
+        </div>
+          <input type="range" defaultValue="0" class="form-range" min="0" max="5" id="skill_range" onChange={e => onChange(e.target.id)}></input>
+
+          <button id="skill_clicked" type="button" class="btn btn-primary" onClick={e => onClick(e.target.id)}>Add a Skill</button>
+      </div>
+
+      <div className="col-6"></div>
+      
+    </div>
+  );
+}
 
 
 
@@ -212,7 +280,9 @@ export default function Accordeon({title , id,col , expand ,onChange = f => f ,o
                   <div className="accordion-body">
                     {title=="Personal_details" ? <Personal_details onChange={onChange}/> : 
                     (title == "Language" ? <Language onChange={onChange} onClick={onClick}/> : (title == "Hobbies" ? <Hobbies onChange={onChange} onClick={onClick}/> : 
-                    (title == "Profile" ? <Profile onChange={onChange}/> : (title == "Formation"?<Education onChange={onChange} onClick={onClick  }/> : title))))}
+                    (title == "Profile" ? <Profile onChange={onChange}/> : (title == "Education"?<Education onChange={onChange} onClick={onClick  }/> : 
+                    (title == "Employment"?<Employment onChange={onChange} onClick={onClick}/> : 
+                    (title == "Skills"? <Skills onChange={onChange} onClick={onClick}/> : title))))))}
                   </div>
                 </div>
             </div>

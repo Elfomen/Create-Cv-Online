@@ -1,12 +1,20 @@
 import React , {useState , useEffect , useContext} from 'react';
 import ViewSide from './extraScript/viewer/viewSide';
 import PromtMainSide from './extraScript/prompt/promptSide';
+import ExecuteUseEffect from './executeUseEffects';
+
+
 import MainData from './allData.json';
+
+
+
+
 
 const dataNames = ["Personal_Details" , "Profile" , "Education" , "Employment" , "Skills" , "Languages" , "Hobbies"];
 var newData = [];
 var Main = MainData;
-function App() {
+  
+function App(){
 
   const [name , setName] = useState("");
   const [id , setId] = useState();
@@ -415,7 +423,124 @@ function App() {
     Main = newData;
     setClicked(null)
   } , [clicked])
+
+
+
+
+  /// Employment use Effects
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    if(id!="position") return null;
+    newData = Main;
+    newData[3].employment_number[newData[3].employment_number.length -1].position = id=="position" ? name : newData[3].employment_number[newData[3].employment_number.length -1].position;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+   useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    if(id!="employer") return null;
+    newData = Main;
+    newData[3].employment_number[newData[3].employment_number.length -1].employer = id=="employer" ? name : newData[3].employment_number[newData[3].employment_number.length -1].employer;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+   useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    if(id!="employment_city") return null;
+    newData = Main;
+    newData[3].employment_number[newData[3].employment_number.length -1].city = id=="employment_city" ? name : newData[3].employment_number[newData[3].employment_number.length -1].city;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    if(id!="employment_start_date" && id!="employment_end_date" && id!="employment_description") return null;
+    newData = Main;
+
+    if(id=="employment_start_date")
+      newData[3].employment_number[newData[3].employment_number.length -1].employment_start_date = id=="employment_start_date" ? name : newData[3].employment_number[newData[3].employment_number.length -1].employment_start_date;
+    else if(id=="employment_end_date")
+      newData[3].employment_number[newData[3].employment_number.length -1].employment_end_date = id=="employment_end_date" ? name : newData[3].employment_number[newData[3].employment_number.length -1].employment_end_date;
+    else
+      newData[3].employment_number[newData[3].employment_number.length -1].employment_description = id=="employment_description" ? name : newData[3].employment_number[newData[3].employment_number.length -1].employment_description;
+    setData(newData);
+      Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(clicked!="employment_click") return null;
+
+    document.querySelector("#position").value = "";
+    document.querySelector("#employment_city").value = "";
+    document.querySelector("#employer").value = "";
+    document.querySelector("#employment_start_date").value = "";
+    document.querySelector("#employment_end_date").value = "";
+    document.querySelector("#employment_description").value = "";
+    newData = Main;
+    var employment_number = newData[3].employment_number;
+    
+    newData[3].employment_number = [...employment_number , {
+                position : "" , 
+                employer : "" , 
+                city : "" , 
+                employment_start_date : "" , 
+                employment_end_date : "" , 
+                employment_description : ""
+            }];
+
+    setData(newData);
+    Main = newData;
+    setClicked(null)
+  } , [clicked])
+
   
+
+  // the skill useEffect
+
+
+  useEffect(() => {
+    if(!data.length) return null;
+    if(id==null) return null;
+    if(id!="skill" && id!="skill_range") return null;
+    newData = Main;
+
+    if(id=="skill")
+      newData[4].skill_number[newData[4].skill_number.length -1].skill = id=="skill" ? name : newData[4].skill_number[newData[4].skill_number.length -1].skill;
+    else
+      newData[4].skill_number[newData[4].skill_number.length -1].skill_level = id=="skill_range" ? name : newData[4].skill_number[newData[4].skill_number.length -1].skill_level;
+      
+    setData(newData);
+    Main = newData;
+    setId(null);
+  } , [id]);
+
+  useEffect(() => {
+    if(clicked!="skill_clicked") return null;
+    document.querySelector("#skill").value = "";
+    document.querySelector("#skill_range").value = 0;
+    newData = Main;
+    var skill_number = newData[4].skill_number;
+    
+    newData[4].skill_number = [...skill_number , {skill:"" , skill_level : 0}];
+
+    setData(newData);
+    Main = newData;
+    setClicked(null)
+  } , [clicked])
+
+
 
   return (
     <div className="row r">
@@ -429,5 +554,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

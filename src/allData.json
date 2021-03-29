@@ -31,18 +31,23 @@
     {
         "title" : "Employment" , 
         "id" : 4,
-        "position" : "" , 
-        "employer" : "" , 
-        "city" : "" , 
-        "start_date" : "" , 
-        "employment_end_date" : "" , 
-        "employment_description" : ""
+        
+        "employment_number" : [
+            {
+                "position" : "" , 
+                "employer" : "" , 
+                "city" : "" , 
+                "employment_start_date" : "" , 
+                "employment_end_date" : "" , 
+                "employment_description" : ""
+            }
+        ]
     } , 
     {
         "title" : "Skills" , 
         "id" : 5,
         "skill" : "" , 
-        "skill_level" : "" 
+        "skill_number" : [{"skill" : "" , "skill_level" : 0}]
     },
     {
         "title" : "Languages" , 

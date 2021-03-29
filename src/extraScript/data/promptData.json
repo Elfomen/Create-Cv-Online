@@ -13,19 +13,19 @@
         "expand" : "false"
     },
     {
-        "title" : "Formation",
+        "title" : "Education",
         "id" : "headingThree",
         "col" : "collapseThree",
         "expand" : "false"
     },
     {
-        "title" : "Professional_Experience",
+        "title" : "Employment",
         "id" : "headingFour",
         "col" : "collapseFour",
         "expand" : "false"
     },
     {
-        "title" : "Competences",
+        "title" : "Skills",
         "id" : "headingFive",
         "col" : "collapseFive",
         "expand" : "false"

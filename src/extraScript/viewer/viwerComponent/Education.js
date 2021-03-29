@@ -6,7 +6,7 @@ function CreateEducation({education , school , city , educational_start_date ,ed
     return(
         <div>
             
-            <div className="row">
+            <div className="row" style={{display:education?'flex':'none'}}>
                 <h1 className="education_name" style={{fontWeight:"bold"}}>{education}</h1>
                 <div className="col-6">
                     <label className="educational_dates" style={{padding:0 , margin:0}}>{school} , {city}</label>
@@ -26,7 +26,7 @@ function CreateEducation({education , school , city , educational_start_date ,ed
 export default function Education({educational_number}){
     return(
         <div>
-            <div className="row">
+            <div className="row" style={{display:educational_number[0].education?'flex':'none'}}>
                 <h1>Education</h1>
                 <hr></hr>
             </div>
