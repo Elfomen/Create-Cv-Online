@@ -2,6 +2,7 @@ import React , {useState , useEffect , useContext} from 'react';
 import ViewSide from './extraScript/viewer/viewSide';
 import PromtMainSide from './extraScript/prompt/promptSide';
 import ExecuteUseEffect from './executeUseEffects';
+import Nav from './extraScript/viewer/viwerComponent/Nav';
 
 
 import MainData from './allData.json';
@@ -543,6 +544,10 @@ function App(){
 
 
   return (
+    <>
+    <div className="row">
+      <Nav />
+    </div><br></br><br></br>
     <div className="row r">
       <div className="col-7">
         <PromtMainSide onChange={e => (setName(document.querySelector(`#${e}`).value) , setId(e))} 
@@ -552,6 +557,7 @@ function App(){
         <ViewSide list={data}/>
       </div>
     </div>
+    </>
   );
 }
 export default App;
