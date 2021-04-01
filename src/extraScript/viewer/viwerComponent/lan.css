@@ -11,7 +11,16 @@
 }
 
 .title-language{
-    margin-top: 7px;
+    margin-top: 5px;
     color: black;
     font-size: 17px;
+}
+
+.main-language {
+    transition: transform 450ms;
+}
+
+.main-language:hover {
+    transform: scale(1.08);
+    cursor: pointer;
 }

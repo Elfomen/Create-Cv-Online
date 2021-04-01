@@ -5,7 +5,7 @@ import Hobbies from './viwerComponent/Hobby';
 import './vLeft.css';
 import SetImage from './image';
 
-export default function LeftColumn({list}){
+export default function LeftColumn({list , onClick=f=>f}){
     return(
         <aside className="left" style={{width:"30%"}}>
            <aside className="row1">
@@ -16,8 +16,8 @@ export default function LeftColumn({list}){
            
            <aside className="row2">
                  <PersonalDetails {...list[0]}/>
-                 <Language {...list[5]}/>
-                 <Hobbies {...list[6]}/>
+                 <Language {...list[5]} onClick={onClick}/>
+                 <Hobbies {...list[6]} onClick={onClick}/>
            </aside>
            <aside className="row3"></aside>
         </aside>

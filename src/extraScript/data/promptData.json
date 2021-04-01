@@ -3,43 +3,50 @@
         "title" : "Personal_details",
         "id" : "headingOne",
         "col" : "collapseOne",
-        "expand" : "false"
+        "expand" : "true",
+        "number" : []
     }
     ,
     {
         "title" : "Profile",
         "id" : "headingTwo",
         "col" : "collapseTwo",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     },
     {
         "title" : "Education",
         "id" : "headingThree",
         "col" : "collapseThree",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     },
     {
         "title" : "Employment",
         "id" : "headingFour",
         "col" : "collapseFour",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     },
     {
         "title" : "Skills",
         "id" : "headingFive",
         "col" : "collapseFive",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     },
     {
         "title" : "Language",
         "id" : "headingSix",
         "col" : "collapseSix",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     },
     {
         "title" : "Hobbies",
         "id" : "headingSeven",
         "col" : "collapseSeven",
-        "expand" : "false"
+        "expand" : "false",
+        "number" : []
     }
 ]

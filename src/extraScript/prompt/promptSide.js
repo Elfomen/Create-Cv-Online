@@ -6,7 +6,7 @@ export default function PromtMainSide({onChange = f => f , onClick = f => f }){
 
     return(
         data.map((dat , i) => (
-            <Accordeon key={i} {...dat} onChange={onChange} onClick={onClick}/>
+            (<Accordeon key={i} {...dat} onChange={onChange} onClick={onClick}/>)
         ))
         
     );

@@ -14,3 +14,12 @@ h1{
 label{
     font-size: 10px;
 }
+
+.create-main-education {
+    transition: transform 450ms;
+}
+
+.create-main-education:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+}

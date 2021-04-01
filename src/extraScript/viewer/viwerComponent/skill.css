@@ -1,0 +1,8 @@
+.skill-container{
+    transition: transform 450ms;
+}
+
+.skill-container:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}

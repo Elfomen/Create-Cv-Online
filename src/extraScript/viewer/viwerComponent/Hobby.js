@@ -1,6 +1,6 @@
 import React from 'react';
 import {FaStar , FaSquare} from 'react-icons/fa';
-
+import './hobby.css';
 
 function SetFaStar({added}){
     return(
@@ -10,9 +10,9 @@ function SetFaStar({added}){
 
 const createArray = (size) => [...Array(size)];
 
-function CreateLanguage({hobby , hobby_level}){
+function CreateLanguage({index,hobby , hobby_level , onClick=f=>f}){
     return(
-        <>
+        <div className="row main-hobby" onClick={e => onClick(`hobby${index}`)}>
             <div className="col-4">
                 <h1 className="title-language">{hobby}</h1>
             </div>
@@ -21,13 +21,13 @@ function CreateLanguage({hobby , hobby_level}){
                  {createArray(5).map((v , i) => <SetFaStar key={i} added={hobby_level > i}/>)}
             </div>
 
-        </>
+        </div>
     );
 }
 
 
 
-export default function Hobbies({hobby , hobby_number}){
+export default function Hobbies({hobby , hobby_number , onClick=f=>f}){
     return(
          <>
         <div className="row" style={{display:hobby?'flex' : 'none'}}>
@@ -38,7 +38,7 @@ export default function Hobbies({hobby , hobby_number}){
         </div>
         <div className="row" style={{display:hobby?'flex' : 'none'}}>
             {hobby_number.map((lan , i) => 
-            <CreateLanguage key={i} hobby={lan.name} hobby_level ={lan.level}/>
+            <CreateLanguage index={i} onClick={onClick} key={i} hobby={lan.name} hobby_level ={lan.level}/>
             )}
         </div>
         </>

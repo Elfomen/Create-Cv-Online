@@ -6,13 +6,13 @@ import Profile from './viwerComponent/Profile';
 import Education from './viwerComponent/Education';
 
 
-export default function RightColumn({list}){
+export default function RightColumn({list , onClick = f=> f}){
     return(
         <aside className="right" style={{width:"70%"}}>
             <Profile {...list[1]}/>
-            <Education {...list[2]}/>
-            <Employment {...list[3]}/>
-            <Skill {...list[4]}/>
+            <Education onClick={onClick} {...list[2]}/>
+            <Employment {...list[3]} onClick={onClick}/>
+            <Skill {...list[4]} onClick={onClick}/>
         </aside>
     );
 }

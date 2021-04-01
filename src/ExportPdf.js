@@ -17,7 +17,7 @@ export default class Export extends Component {
         const pdf = new jsPDF();
         pdf.addImage(imgData, 'JPEG', 0, 0);
         // pdf.output('dataurlnewwindow');
-        pdf.save(`The_YannDevs_Online_CV.pdf`);
+        pdf.save(`YannDevs.pdf`);
       })
     ;
   }
@@ -26,16 +26,15 @@ export default class Export extends Component {
     return (
       <div className="mb5">
 
-         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button className="btn btn-dark" onClick={this.printDocument}>Export As PDF</button>
+              <a class="navbar-brand" href="#">Go to home page</a>
+              <button className="btn btn-primary" onClick={this.printDocument}>Export As PDF</button>
     
             </div>
-        </nav>
+        </nav><br></br>
         
-      </div>
-      
+      </div>      
     );
   }
 }

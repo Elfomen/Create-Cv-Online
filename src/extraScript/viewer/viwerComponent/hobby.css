@@ -1,0 +1,8 @@
+.main-hobby{
+    transition: transform 450ms;
+}
+
+.main-hobby:hover{
+    transform: scale(1.08);
+    cursor: pointer;
+}

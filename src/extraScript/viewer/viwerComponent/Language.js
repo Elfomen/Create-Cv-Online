@@ -12,9 +12,9 @@ function SetFaStar({added}){
 
 const createArray = (size) => [...Array(size)];
 
-function CreateLanguage({language , language_level}){
+function CreateLanguage({index,onClick=f=>f,language , language_level}){
     return(
-        <>
+        <div className="row main-language" onClick={e => onClick(`language${index}`)}>
             <div className="col-4">
                 <h1 className="title-language">{language}</h1>
             </div>
@@ -23,11 +23,11 @@ function CreateLanguage({language , language_level}){
                  {createArray(5).map((v , i) => <SetFaStar key={i} added={language_level > i}/>)}
             </div>
 
-        </>
+        </div>
     );
 }
 
-export default function Language({language , language_level , language_number}){
+export default function Language({language , language_level , language_number , onClick=f=>f}){
     return(
         <>
         <div className="row" style={{display:language?'flex' : 'none'}}>
@@ -38,7 +38,7 @@ export default function Language({language , language_level , language_number}){
         </div>
         <div className="row" style={{display:language?'flex' : 'none'}}>
             {language_number.map((lan , i) => 
-            <CreateLanguage key={i} language={language_number[i].name} language_level={language_number[i].level}/>
+            <CreateLanguage index={i} onClick={onClick} key={i} language={language_number[i].name} language_level={language_number[i].level}/>
             )}
         </div><br></br>
         </>
